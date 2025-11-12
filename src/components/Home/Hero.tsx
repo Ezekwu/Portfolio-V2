@@ -1,7 +1,8 @@
 import Button from '../Ui/Button/Button';
+
 export default function Hero() {
   return (
-    <div className='hero'>
+    <div className='hero pt-20! flex relative  '>
       <svg className='hero-background'>
          <filter>
            <feTurbulence type="turbulence" baseFrequency="0.65"/>
@@ -17,13 +18,13 @@ export default function Hero() {
         <div className="g5"></div>
       </div>
 
-      <div className="hero-content max-w-[650px] mx-auto">
+      <div className="hero-content max-w-[650px] mx-auto ">
         <div className="gradient-text text-[18px] font-grotesk font-normal flex gap-2 items-center justify-center">
           <span>Frontend Engineer</span>
           <span className="w-1 h-1 bg-white rounded-full"></span>
           <span>Fullstack Engineer</span>
         </div>
-        <h1 className="text-[64px] leading-[120%] font-normal gradient-text mb-5 font-sora">Ezekwu Jeremiah <br /> Frontend Engineer</h1>
+        <h1 className="text-[4rem] leading-[120%] font-normal gradient-text mb-5 font-sora">Ezekwu Jeremiah <br /> Frontend Engineer</h1>
 
         <p className=" gradient-text text-lg font-normal mb-10 leading-[120%] max-w-[600px] mx-auto">Open to job opportunities worldwide. Passionate about building polished, intuitive and thoughtful digital experiences that leave a mark.</p>
 

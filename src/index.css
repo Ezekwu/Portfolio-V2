@@ -10,12 +10,18 @@
   --font-rubik: "Rubik", sans-serif;
   --font-sora: "Sora", sans-serif;
   --font-grotesk: "Space Grotesk", sans-serif;
+
 }
 
 :root {
   --text-gradient: linear-gradient(119.93deg, #1C114E -7.09%, #FFFFFF 53.79%);
 }
 
+@layer utilities {
+  .hover-bg-transition {
+    @apply transition-all duration-300;
+  }
+}
 
 body {
   font-family: var(--font-sora);
@@ -273,4 +279,56 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+
+.menu-overlay {
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+}
+
+.menu-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 1;
+  padding-bottom: 40px;
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.menu-link-item-wrapper {
+  /* position: relative; */
+}
+
+.email-link {
+  position: relative;
+  display: inline-block;
+}
+
+.email-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(119.93deg, #1C114E -7.09%, #FFFFFF 53.79%);
+  transition: width 0.4s ease-in-out;
+}
+
+.email-link:hover::after {
+  width: 100%;
+}
+
 
