@@ -3,7 +3,7 @@ import { Link} from '@tanstack/react-router';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { IoGlobeOutline } from "react-icons/io5";
-import { RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTwitterFill } from 'react-icons/ri';
+import { RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTwitterFill, RiPlayFill } from 'react-icons/ri';
 
 import BaseWrapper from './BaseWrapper';
 import { navItems } from '@/utils/constants';
@@ -143,7 +143,7 @@ export default function Menu({ isOpen, setIsOpen }: MenuProps) {
                 <li>
                   <div className='menu-link-item'>
                     <div className="menu-link-item-wrapper flex gap-4 items-center group">
-                      <div className={cn('w-6 h-6 inset-0 inline-block bg-white/85 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive('/') && 'opacity-100')}></div>
+                      <RiPlayFill className={cn('w-8 h-8 text-white/85 opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive('/') && 'opacity-100')} />
                         <Link className=' text-5xl font-normal font-sora hover:text-white/70 transition-all duration-300' to='/'>Home</Link>
                     </div>
                   </div>
@@ -152,7 +152,7 @@ export default function Menu({ isOpen, setIsOpen }: MenuProps) {
                 <li key={item.label}>
                   <div className='menu-link-item'>
                     <div className="menu-link-item-wrapper flex gap-4 items-center group">
-                      <div className={cn('w-6 h-6 inset-0 inline-block bg-white/85 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive(item.href) && 'opacity-100')}></div>
+                      <RiPlayFill className={cn('w-8 h-8 text-white/85 opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive(item.href) && 'opacity-100')} />
                         <Link className=' text-5xl font-normal font-sora hover:text-white/70 transition-all duration-300' to={item.href}>{item.label}</Link>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ export default function Menu({ isOpen, setIsOpen }: MenuProps) {
                 <li key={item.label}>
                   <div className='menu-link-item'>
                     <div className="menu-link-item-wrapper flex gap-4 items-center group">
-                      <div className={cn('w-6 h-6 inset-0 inline-block bg-white/85 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive(item.href) && 'opacity-100')}></div>
+                      <RiPlayFill className={cn('w-8 h-8 text-white/85 opacity-0 group-hover:opacity-100 transition-all duration-300 z-0', isActive(item.href) && 'opacity-100')} />
                         <Link className=' text-5xl font-normal font-sora hover:text-white/70 transition-all duration-300' to={item.href}>{item.label}</Link>
                     </div>
                   </div>
