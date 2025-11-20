@@ -11,12 +11,14 @@ interface Props {
   children: React.ReactNode;
   animateOnScroll?: boolean;
   delay?: number;
+  start?: string;
 }
 
 export default function AnimatedText({
   animateOnScroll = true,
   children,
   delay = 0,
+  start = "top 75%",
 }: Props) {
   const containerRef = useRef<HTMLDivElement |  null>(null);
 
@@ -86,7 +88,7 @@ export default function AnimatedText({
             ...animationProps,
             scrollTrigger: {
               trigger: containerRef.current,
-              start: "top 75%",
+              start: start,
               once: true,
             }
           })
