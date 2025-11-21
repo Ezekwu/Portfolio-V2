@@ -60,7 +60,7 @@ export default function Skills() {
       <BaseWrapper className="  ">
       <div className="border-t border-white/10 py-20">
         <AnimatedText animateOnScroll={true}>
-          <h2 className="text-4xl font-sora text-white mb-4">Skills</h2>
+          <h2 className="text-4xl font-sora mb-4 text-white/90">Skills</h2>
           <p className="text-typography-secondary md:max-w-4/5 ">
             A comprehensive skill set covering the entire Frontend spectrum alongside practical full-stack development experience, ensuring clean architecture, high performance, and robust data integration.            
             </p>

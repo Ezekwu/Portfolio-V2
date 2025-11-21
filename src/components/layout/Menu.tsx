@@ -9,7 +9,7 @@ import BaseWrapper from './BaseWrapper';
 import { navItems } from '@/utils/constants';
 import { cn } from '@/utils/helpers';
 
-const socials = [
+ const socials = [
   {
     icon: <RiLinkedinFill className=' text-xl md:text-2xl text-white/85' />,
     href: 'https://www.linkedin.com/in/ezekwu-jeremiah-a84560212/',

@@ -68,6 +68,23 @@ export default function AnimatedText({
           el.style.textIndent = "0";
         }
 
+        if (el.classList.contains('gradient-text')) {
+          const bgImage = computeStyle.backgroundImage;
+          const bgClip = computeStyle.backgroundClip || computeStyle.webkitBackgroundClip;
+          
+          splitLines.forEach((line) => {
+            if (bgImage && bgImage !== 'none') {
+              line.style.backgroundImage = bgImage;
+            }
+            if (bgClip) {
+              line.style.backgroundClip = bgClip;
+              line.style.webkitBackgroundClip = bgClip;
+            }
+            line.style.color = 'transparent';
+            line.style.webkitTextFillColor = 'transparent';
+          });
+        }
+
         lines.current.push(...splitLines);
 
         

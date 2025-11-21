@@ -53,9 +53,9 @@ export default function About() {
     <section className="py-26">
       <BaseWrapper>
         <div className="mb-10">
-          <AnimatedText animateOnScroll={true}>
+          <AnimatedText delay={0.3} animateOnScroll={true}>
             <p className="text-base font-sora text-white/70 mb-4">ALL THERE IS TO KNOW</p>
-            <h3 className="text-5xl font-sora text-white/90  ">About Me</h3>
+            <h3 className="text-5xl font-sora text-white/90">About Me</h3>
           </AnimatedText>
         </div>
 

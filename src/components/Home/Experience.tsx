@@ -52,7 +52,7 @@ export default function Experience() {
       <BaseWrapper>
       <AnimatedText animateOnScroll={true} delay={0.2} start="top 50%">
         <p className="text-base font-sora text-white/70 mb-4">WITH OVER 4 YEARS OF</p>
-        <h3 className="text-5xl font-sora text-white/90  ">Work Experience</h3>
+        <h3 className="text-5xl font-sora text-white/90">Work Experience</h3>
       </AnimatedText>
 
       <div className="flex flex-col gap-6 mt-16 mb-24" ref={experienceContainerRef}>

@@ -64,8 +64,7 @@ export default function Hero() {
           <span className="w-1 h-1 bg-white rounded-full"></span>
           <span>Fullstack Engineer</span>
         </div>
-          <h1 className="text-[4rem] leading-[120%] font-normal gradient-text mb-5 font-sora">Ezekwu Jeremiah <br /> Frontend Engineer</h1>
-
+          <h1 className="text-[4rem] leading-[120%] font-normal gradient-text mb-5 font-sora">Ezekwu Jeremiah  Frontend Engineer</h1>
         <p className=" gradient-text text-lg font-normal mb-10 leading-[120%] max-w-[600px] mx-auto">Open to job opportunities worldwide. Passionate about building polished, intuitive and thoughtful digital experiences that leave a mark.</p>
 
         <div className="flex gap-4 md:gap-6 w-full max-w-[428px] mx-auto">
