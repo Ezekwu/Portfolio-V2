@@ -51,6 +51,7 @@ export default function Footer() {
       duration: 0.6,
       stagger: 0.1,
       ease: "power2.out",
+      delay: 0.5,
       scrollTrigger: {
         trigger: navListRef.current,
         start: "top 80%",
@@ -107,7 +108,7 @@ export default function Footer() {
       <div className="bg-[#36286b]  rounded-3xl px-10 grid grid-cols-3">
          <div className="flex flex-col gap-10 justify-between h-full pr-[28px] py-10">
            <div>
-            <AnimatedText animateOnScroll={true} delay={0.2}>
+            <AnimatedText animateOnScroll={true} delay={0.5}>
             <h1 className="text-xl font-sora font-semibold text-white mb-4">EZEKWU JEREMIAH</h1>
               <p className="text-sm leading-[150%]">Open to job opportunities worldwide. Passionate about building polished, intuitive and thoughtful digital experiences that leave a mark.</p>
             </AnimatedText>
@@ -131,7 +132,7 @@ export default function Footer() {
            </ul>
          <div className="py-8 pl-[28px] flex flex-col justify-between">
           <div>
-            <AnimatedText animateOnScroll={true} delay={0.2}>
+            <AnimatedText animateOnScroll={true} delay={0.5}>
             <h3 className="text-2xl font-sora font-semibold text-white mb-4 w-4/5">Ready to bring your project to life?</h3>
             <p className="text-sm text-typography-secondary font-normal font-sora leading-[150%] w-4/5">Let's discuss your project and how I can help you achieve your goals.</p>
             </AnimatedText>

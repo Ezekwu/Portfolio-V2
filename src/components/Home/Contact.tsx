@@ -3,6 +3,7 @@ import BaseWrapper from "../layout/BaseWrapper";
 import { RxArrowTopRight } from "react-icons/rx";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import AnimatedTextOnScroll from "../animations/AnimatedTextOnScroll";
 
 export default function Contact() {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -48,12 +49,16 @@ export default function Contact() {
    <section className='py-40'>
       <BaseWrapper>
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[1000px] mx-auto">
-          <AnimatedText animateOnScroll={true} delay={0.2}>
-          <p className="text-base font-sora text-white/70 mb-4 uppercase">Get in touch with me</p>
-          <h2 className='text-6xl text-center font-sora font-medium leading-[120%] mb-8 gradient-text'>Let's build <br /> something together</h2>
-          <p className='text-lg text-center text-typography-secondary font-sora font-normal leading-[150%] mb-8'>
-            I am open to new opportunities. If you have any questions or want to work together, <br /> please feel free to contact me.
-          </p>
+            <AnimatedText animateOnScroll={true} delay={0.5}>
+            <p className="text-base font-sora text-white/70 mb-4 uppercase">Get in touch with me</p>
+            </AnimatedText>
+          <AnimatedTextOnScroll>
+            <h2 className='text-6xl text-center font-sora font-medium leading-[120%] mb-8 '>Let's build <br /> something together</h2>
+          </AnimatedTextOnScroll>
+          <AnimatedText animateOnScroll={true} delay={0.5}>
+            <p className='text-lg text-center text-typography-secondary font-sora font-normal leading-[150%] mb-8'>
+              I am open to new opportunities. If you have any questions or want to work together, <br /> please feel free to contact me.
+            </p>
           </AnimatedText>
           <a href="mailto:jeremiah.ezekwu@gmail.com">
             <button 
