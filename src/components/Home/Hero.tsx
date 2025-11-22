@@ -1,47 +1,47 @@
-import { useEffect, useRef } from 'react';
+import {  useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../Ui/Button/Button';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const heroContentRef = useRef<HTMLDivElement>(null);
+  // const heroRef = useRef<HTMLDivElement>(null);
+  // const heroContentRef = useRef<HTMLDivElement>(null);
   const heroBackgroundRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!heroRef.current || !heroContentRef.current || !heroBackgroundRef.current) return;
+  // useEffect(() => {
+  //   if (!heroRef.current || !heroContentRef.current || !heroBackgroundRef.current) return;
 
-    const hero = heroRef.current;
-    const heroContent = heroContentRef.current;
+  //   const hero = heroRef.current;
+  //   const heroContent = heroContentRef.current;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: hero,
-        start: 'top top',
-        end: '+=100%',
-        scrub: true,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: hero,
+  //       start: 'top top',
+  //       end: '+=100%',
+  //       scrub: true,
+  //       pin: true,
+  //       pinSpacing: true,
+  //       anticipatePin: 1,
+  //       invalidateOnRefresh: true,
+  //     },
+  //   });
 
-    tl.fromTo(heroContent, 
-      { y: 0,  },
-      { y: -350, animationDuration: 1, ease: 'power1.out' }
-    );
+  //   tl.fromTo(heroContent, 
+  //     { y: 0,  },
+  //     { y: -350, animationDuration: 1, ease: 'power1.out' }
+  //   );
 
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     tl.kill();
+  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  //   };
+  // }, []);
 
   return (
-    <div  className='hero max-h-[1400px] mx-auto! pt-20! flex relative z-10'>
-      <div ref={heroRef}>
+    <div  className='hero min-h-screen max-h-[1400px] mx-auto! pt-20! flex relative z-10'>
+      <div >
         <div ref={heroBackgroundRef} className="hero-background-wrapper absolute inset-0 w-full h-full z-0">
         <svg className='hero-background'>
            <filter>
@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div ref={heroContentRef} className="hero-content max-w-[650px] mx-auto relative z-50">
+      <div  className="hero-content max-w-[650px] mx-auto relative z-50">
         <div className="gradient-text text-[18px] font-grotesk font-normal flex gap-2 items-center justify-center">
           <span>Frontend Engineer</span>
           <span className="w-1 h-1 bg-white rounded-full"></span>
