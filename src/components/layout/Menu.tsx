@@ -33,7 +33,7 @@ interface MenuProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function Menu({ isOpen, setIsOpen }: MenuProps) {
+export default function Menu({ isOpen }: MenuProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const timeline = useRef<GSAPTimeline>(null);
 
