@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -20,15 +20,31 @@ export default function AnimatedText({
   delay = 0,
   start = "top 75%",
 }: Props) {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement |  null>(null);
 
   const elementRef = useRef<HTMLElement[]>([]);
   const splitRef = useRef<SplitText[]>([]);
   const lines = useRef<HTMLElement[]>([]);
 
+  useEffect(() => {
+    let disposed = false;
+
+    // Wait for ALL fonts (including Google Fonts)
+    document.fonts.ready.then(() => {
+      if (!disposed) {
+        setFontsLoaded(true);
+      }
+    });
+
+    return () => {
+      disposed = true;
+    };
+  }, []);
+
   useGSAP(
     () => {
-      if (!containerRef.current) return;
+      if (!containerRef.current || !fontsLoaded) return;
 
       splitRef.current = [];
       elementRef.current = [];
@@ -112,6 +128,7 @@ export default function AnimatedText({
         } else {
           gsap.to(lines.current, animationProps)
         }
+        
 
       return () => {
         splitRef.current.forEach((split) => {
@@ -121,7 +138,7 @@ export default function AnimatedText({
         });
       }
     },
-    { scope: containerRef, dependencies: [animateOnScroll, delay] }
+    { scope: containerRef, dependencies: [animateOnScroll, delay, fontsLoaded] }
   );
 
 

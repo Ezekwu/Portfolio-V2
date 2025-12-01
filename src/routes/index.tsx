@@ -8,18 +8,23 @@ import Projects from '@/components/Home/Projects'
 import Skills from '@/components/Home/Skills'
 import Contact from '@/components/Home/Contact'
 import Footer from '@/components/Home/Footer'
+import LoadingPage from '@/components/layout/LoadingPage'
 
 export const Route = createFileRoute('/')({
   component: () => (
-    <ReactLenis root>
-      <Navbar />
-      <Hero />
-      <Projects />
-      <Skills />
-      <Experience />
-      <About />
-      <Contact />
-      <Footer />
-    </ReactLenis>
+    <>
+      <LoadingPage />
+      <ReactLenis root>
+        <Navbar />
+        <Hero />
+        <Projects />
+        <Skills />
+        <Experience />
+        <About />
+        <Contact />
+        <Footer />
+      </ReactLenis>
+    </>
+    
   ),
 })

@@ -9,12 +9,20 @@ import express from '@/assets/icons/express.svg';
 import supabase from '@/assets/icons/supabase.svg';
 import framer from '@/assets/icons/framer.svg';
 
+
+import BullishLiving from '@/assets/images/bullish-living.png';
+import Kodee from '@/assets/images/kodee.png';
+import PrepNourish from '@/assets/images/prep-nourish.png';
+import ChibuezeUchegbu from '@/assets/images/chibueze-portfolio.png';
+import ChibuezeUchegbuMobile from '@/assets/images/chibueze-portfolio-mobile.png';
+
 export const projectsData = [
   {
     id: 1,
     title: 'BullishLiving',
     description: 'An e-commerce platform for a fitness brand featuring full store functionality (checkout, payment) and a dedicated admin portal for inventory management, order creation, and stock keeping.',
     link: 'https://bullishliving.com',
+    image: BullishLiving,
     stack: [
       {
         tech: 'Next.js',
@@ -40,6 +48,7 @@ export const projectsData = [
     title: 'Kodee',
     description: 'A comprehensive restaurant management application that automates core processes, including menu creation, order processing, and real-time order tracking, with staff roles for efficient inventory and order management.',
     link: 'https://www.kodee.app/',
+    image: Kodee,
     stack: [
       {
         tech: 'Next.js',
@@ -68,6 +77,7 @@ export const projectsData = [
     title: 'PrepNourish',
     description: 'A healthy meal prep subscription service that allows users to create meal plans and schedules. ',
     link: 'https://prepnourish.com/',
+    image: PrepNourish,
     stack: [
       {
         tech: 'Next.js',
@@ -100,6 +110,8 @@ export const projectsData = [
     title: 'Chibueze Uchegbu',
     description: 'A dynamic portfolio website showcasing the work of a multidisciplinary designer and bioinformatics enthusiast.',
     link: 'https://chibueze-uchegbu.vercel.app/',
+    image: ChibuezeUchegbu,
+    mobileImage: ChibuezeUchegbuMobile,
     stack: [
       {
         tech: 'React',

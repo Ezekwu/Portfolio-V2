@@ -12,7 +12,6 @@ export default function About() {
    const wrapperRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
-
    useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       if (imgRef.current && wrapperRef.current) {
@@ -48,7 +47,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className="py-26">
+    <section id="about" className="py-26">
       <BaseWrapper>
         <div className="mb-10">
           <AnimatedText delay={0.3} animateOnScroll={true}>
@@ -57,18 +56,18 @@ export default function About() {
           </AnimatedText>
         </div>
 
-        <div className="flex justify-between gap-14 items-center">
-          <div ref={wrapperRef} className="reveal-wrapper w-[55%] h-[680px]">
+        <div className="flex flex-col md:flex-row justify-between md:gap-14 items-center">
+          <div ref={wrapperRef} className="reveal-wrapper md:w-[55%] w-full md:h-[680px] h-[420px]">
             <div className="rounded-lg overflow-hidden h-full w-full relative">
               <img 
                 ref={imgRef} 
                 src={portrait} 
                 alt="About Me" 
-                className="absolute inset-0 w-full h-[120%] object-cover object-[25%_23%]"
+                className="absolute inset-0 w-full h-[420px] md:h-[120%] object-cover object-[25%_23%]"
               />
             </div>
           </div>
-          <div className="w-[45%] flex flex-col justify-between gap-10 ">
+          <div className="md:w-[45%] w-full flex flex-col justify-between gap-10 ">
             <AnimatedTextOnScroll >
               <p className="text-xl font-sora text-white/90 mb-4 leading-[150%]">
                 I love playing Basketball, trying out new food and having new experiences. I’m a brand and product designer with a passion for building identities and digital products that connect creativity with real-world impact. Over the years, I’ve helped startups and growing businesses craft memorable brands, intuitive websites, and user-first digital experiences.

@@ -56,12 +56,12 @@ export default function Skills() {
     setActiveSkillCategory(category);
   }
   return (
-    <section className="min-h-screen bg-[#010111]">
+    <section id="skills" className="min-h-screen bg-[#010111]">
       <BaseWrapper className="  ">
-      <div className="border-t border-white/10 py-20">
+      <div className="border-t border-white/10 md:py-20 py-10">
         <AnimatedText animateOnScroll={true}>
-          <h2 className="text-4xl font-sora mb-4 text-white/90">Skills</h2>
-          <p className="text-typography-secondary md:max-w-4/5 ">
+          <h2 className="text-3xl md:text-4xl font-sora mb-4 text-white/90">Skills</h2>
+          <p className="text-typography-secondary text-sm md:text-base md:max-w-4/5 ">
             A comprehensive skill set covering the entire Frontend spectrum alongside practical full-stack development experience, ensuring clean architecture, high performance, and robust data integration.            
             </p>
         </AnimatedText>

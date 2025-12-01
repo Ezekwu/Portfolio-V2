@@ -46,17 +46,17 @@ export default function Contact() {
   }, []);
 
   return (
-   <section className='py-40'>
+   <section id="contact" className='md:py-40 py-10'>
       <BaseWrapper>
-        <div className="flex flex-col items-center justify-center text-center text-white max-w-[1000px] mx-auto">
+        <div className="flex flex-col items-center justify-center text-center text-white md:max-w-[1000px] mx-auto">
             <AnimatedText animateOnScroll={true} delay={0.5}>
-            <p className="text-base font-sora text-white/70 mb-4 uppercase">Get in touch with me</p>
+            <p className="text-sm md:text-base font-sora text-white/70 mb-4 uppercase">Get in touch with me</p>
             </AnimatedText>
           <AnimatedTextOnScroll>
-            <h2 className='text-6xl text-center font-sora font-medium leading-[120%] mb-8 '>Let's build <br /> something together</h2>
+            <h2 className='text-4xl md:text-6xl text-center font-sora font-medium leading-[120%] mb-8 '>Let's build <br /> something together</h2>
           </AnimatedTextOnScroll>
           <AnimatedText animateOnScroll={true} delay={0.5}>
-            <p className='text-lg text-center text-typography-secondary font-sora font-normal leading-[150%] mb-8'>
+            <p className='md:text-lg text-center text-typography-secondary font-sora font-normal  w-full md:w-10/12 leading-[150%] mb-8'>
               I am open to new opportunities. If you have any questions or want to work together, <br /> please feel free to contact me.
             </p>
           </AnimatedText>

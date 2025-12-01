@@ -30,10 +30,13 @@
 
 body {
   font-family: var(--font-sora);
+  font-display: swap;
   scroll-behavior: smooth;
   background-color: #010111;
   overflow-x: hidden;
 }
+
+/* Smooth scroll is handled by GSAP ScrollToPlugin */
 
 
 
@@ -293,6 +296,12 @@ body {
   mask-composite: exclude;
   pointer-events: none;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary-border:hover::before {
+  opacity: 1;
 }
 
 .menu-overlay {
@@ -422,4 +431,20 @@ body {
   }
 }
 
+/* loader page */
+
+.name, .digit, .count {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+ .count h1, .digit h1  {
+  position: relative;
+  transform: translateY(120%);
+  will-change: transform;
+}
+
+
+.overlay > div {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
 

@@ -6,14 +6,16 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const { title, description, link, stack } = project;
+  const { title, description, link, stack, image } = project;
 
   return (
     <article 
-      className="project-card flex flex-col justify-between rounded-4xl p-3 pb-6 border border-white/10"
+      className="project-card flex flex-col justify-between rounded-4xl  p-2 md:p-3 pb-6 border border-white/10"
     >
-      <div className="h-[293px] w-full bg-white/10 rounded-2xl"></div>
-      <div className="p-3 pt-6 flex flex-col justify-between gap-6 flex-1">
+      <div className="h-[328px] w-full bg-white/10 rounded-2xl">
+        <img src={image} alt={title} className="w-full h-full object-cover rounded-2xl" />
+      </div>
+      <div className=" p-1 md:p-3 pt-6 flex flex-col justify-between gap-6 flex-1">
         <div>
           <div className="flex flex-wrap gap-2 mb-3">
             {stack.map((tech) => (

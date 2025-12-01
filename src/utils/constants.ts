@@ -2,24 +2,24 @@ export const navItems = [
     
     {
       label: 'Projects',
-      href: '/projects',
+      href: '#projects',
     },
     {
       label: 'Skills',
-      href: '/skills',
+      href: '#skills',
     }, 
     {
       label: 'Contact',
-      href: '/contact',
+      href: '#contact',
     },
     
     {
       label: 'About',
-      href: '/about',
+      href: '#about',
     },
     {
       label: 'Experience',
-      href: '/experience',
+      href: '#experience',
     },
     
   ]

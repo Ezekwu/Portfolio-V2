@@ -4,4 +4,5 @@ export interface Project {
   description: string;
   link: string;
   stack: { tech: string; icon: string }[];
+  image: string;
 }

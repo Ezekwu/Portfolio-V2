@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 import { navItems } from '@/utils/constants';
+import { scrollToElement } from '@/utils/helpers';
 import { cn } from '@/utils/helpers';
 
 import BaseWrapper from './BaseWrapper'
@@ -88,29 +89,37 @@ export default function Navbar() {
   }, [isOpen]);
 
 return (
-  <header className="fixed top-4 left-0 w-full z-50">
-    <BaseWrapper className="flex items-center justify-between">
+  <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm">
+    <BaseWrapper className="flex items-center justify-between py-2">
       <Link to="/" className="z-60">
           <h1 className="font-poppins text-white/85 text-[22px] font-regular">ezekwu</h1>
       </Link>
-      <nav className={cn("p-8 ",)}>
+      <nav className={cn("p-8 hidden lg:block")}>
         
           <div className="flex items-center justify-center gap-10">
             {navItems.map((item) => (
-              <Link to={item.href} key={item.label}>
-                <span className="font-sora text-white/85 hover:text-white/60 transition-all duration-300 text-sm font-regular">{item.label}</span>
-              </Link>
+              <a 
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToElement(item.href);
+                }}
+                key={item.label}
+                className="font-sora text-white/85 hover:text-white/60 transition-all duration-300 text-sm font-regular cursor-pointer"
+              >
+                {item.label}
+              </a>
             ))}
           </div>
           
       </nav>
         
-        <button onClick={toggleMenu} className='cursor-pointer bg-[#FFFFFF0D] hover-bg-transition w-[72px] h-14 flex items-center justify-center rounded-full  z-100 relative'>
+        <button onClick={toggleMenu} className='cursor-pointer bg-[#FFFFFF0D] hover-bg-transition md:w-[72px] w-12 h-12 md:h-14 flex items-center justify-center rounded-full  z-100 relative'>
           <span ref={menuIconRef} className="absolute flex items-center justify-center">
-            <RiMenu4Fill className="text-white/70 text-2xl" />
+            <RiMenu4Fill className="text-white/70 md:text-2xl text-xl" />
           </span>
           <span ref={closeIconRef} className="absolute flex items-center justify-center">
-            <IoClose className="text-white/70 text-2xl" />
+            <IoClose className="text-white/70 md:text-2xl text-xl" />
           </span>
         </button>
     </BaseWrapper>

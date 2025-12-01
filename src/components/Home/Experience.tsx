@@ -48,13 +48,14 @@ export default function Experience() {
   );
 
   return (
-    <section className="text-white py-20 mt-20">
+    <section id="experience" className="text-white md:py-20 py-10 mt-20">
       <BaseWrapper>
       <AnimatedText animateOnScroll={true} delay={0.2} start="top 50%">
-        <p className="text-base font-sora text-white/70 mb-4">WITH OVER 4 YEARS OF</p>
-        <h3 className="text-5xl font-sora text-white/90">Work Experience</h3>
+        <p className="font-sora text-white/70 mb-4 text-sm md:text-base">WITH OVER 4 YEARS OF</p>
       </AnimatedText>
-
+      <AnimatedText animateOnScroll={true} delay={0.2} start="top 50%">
+      <h3 className="text-4xl md:text-5xl font-sora text-white/90 w-full">Work Experience</h3>
+      </AnimatedText>
       <div className="flex flex-col gap-6 mt-16 mb-24" ref={experienceContainerRef}>
         {experienceData.map((experience) => (
           <div key={experience.id} className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 pb-6" style={{ borderBottom: '1px solid', borderImageSource: 'linear-gradient(90deg,  #010111  0%, #ffffff9c 98.08%)', borderImageSlice: 1 }}>

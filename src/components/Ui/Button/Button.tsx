@@ -83,7 +83,7 @@ export default function Button({ children, className, variant = 'primary' }: But
         />
       )}
       
-      <span className={cn("relative z-20", variant === 'secondary' && 'gradient-text')}>
+      <span className={cn("relative z-20 whitespace-nowrap", variant === 'secondary' && 'gradient-text')}>
         {children}
         </span>
     </button>
