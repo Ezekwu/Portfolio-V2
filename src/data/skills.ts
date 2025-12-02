@@ -7,7 +7,7 @@ import node from '@/assets/icons/node.svg';
 import mongo from '@/assets/icons/mongo.svg';
 import express from '@/assets/icons/express.svg';
 import supabase from '@/assets/icons/supabase.svg';
-import framer from '@/assets/icons/framer.svg';
+import motion from '@/assets/icons/motion.svg';
 import javascript from '@/assets/icons/javascript.svg';
 import vue from '@/assets/icons/vue.svg';
 import git from '@/assets/icons/git.svg';
@@ -75,7 +75,7 @@ export const skillsData: Skill[] = [
     id: 7,
     name: 'Framer Motion',
     category: 'Styling & Animation',
-    icon: framer,
+    icon: motion,
   },
   {
     id: 8,
@@ -94,11 +94,6 @@ export const skillsData: Skill[] = [
     name: 'Zustand',
     category: 'State & Data Management',
     icon: zustand,
-  },
-  {
-    id: 11,
-    name: 'React Testing Library',
-    category: 'Testing',
   },
   {
     id: 12,

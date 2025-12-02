@@ -69,11 +69,11 @@ export default function About() {
           <div className="md:w-[45%] w-full flex flex-col justify-between gap-10 ">
             <AnimatedText >
               <p className="text-xl font-sora text-white/90 mb-4 leading-[150%]">
-                I love playing Basketball, trying out new food and having new experiences. I’m a brand and product designer with a passion for building identities and digital products that connect creativity with real-world impact. Over the years, I’ve helped startups and growing businesses craft memorable brands, intuitive websites, and user-first digital experiences.
+              I’m a senior frontend engineer with over four years of experience building modern, high-performing web applications using React, TypeScript, and Next.js. I focus on creating clean, scalable interfaces that solve real-world problems while maintaining strong performance and accessibility standards. I’ve led frontend initiatives, introduced best practices, and collaborated across teams to deliver user-friendly and maintainable products that support business growth.
               </p>
 
               <p className="text-xl font-sora text-white/90 mb-4 leading-[150%]">
-                I love playing Basketball, trying out new food and having new experiences. I’m a brand and product designer with a passion for building identities and digital products that connect creativity with real-world impact. Over the years, I’ve helped startups and growing businesses craft memorable brands, intuitive websites, and user-first digital experiences.
+              When I’m not solving problems for businesses, you’ll usually find me outdoors taking walks and observing nature. I enjoy listening to music, staying active through exercise, and finding simple ways to stay inspired and balanced outside of work.
               </p>
             </AnimatedText>
           </div>

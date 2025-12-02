@@ -7,7 +7,7 @@ import node from '@/assets/icons/node.svg';
 import mongo from '@/assets/icons/mongo.svg';
 import express from '@/assets/icons/express.svg';
 import supabase from '@/assets/icons/supabase.svg';
-import framer from '@/assets/icons/framer.svg';
+import motion from '@/assets/icons/motion.svg';
 
 
 import BullishLiving from '@/assets/images/bullish-living.png';
@@ -127,7 +127,7 @@ export const projectsData = [
       },
       {
         tech: 'Motion',
-        icon: framer
+        icon: motion
       }
     ]
   }
