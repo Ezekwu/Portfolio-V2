@@ -3,7 +3,6 @@ import AnimatedText from "../animations/AnimatedText";
 import BaseWrapper from "../layout/BaseWrapper";
 
 import portrait from '@/assets/images/my-portrait-bw.jpeg';
-import AnimatedTextOnScroll from "../animations/AnimatedTextOnScroll";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -68,7 +67,7 @@ export default function About() {
             </div>
           </div>
           <div className="md:w-[45%] w-full flex flex-col justify-between gap-10 ">
-            <AnimatedTextOnScroll >
+            <AnimatedText >
               <p className="text-xl font-sora text-white/90 mb-4 leading-[150%]">
                 I love playing Basketball, trying out new food and having new experiences. I’m a brand and product designer with a passion for building identities and digital products that connect creativity with real-world impact. Over the years, I’ve helped startups and growing businesses craft memorable brands, intuitive websites, and user-first digital experiences.
               </p>
@@ -76,7 +75,7 @@ export default function About() {
               <p className="text-xl font-sora text-white/90 mb-4 leading-[150%]">
                 I love playing Basketball, trying out new food and having new experiences. I’m a brand and product designer with a passion for building identities and digital products that connect creativity with real-world impact. Over the years, I’ve helped startups and growing businesses craft memorable brands, intuitive websites, and user-first digital experiences.
               </p>
-            </AnimatedTextOnScroll>
+            </AnimatedText>
           </div>
         </div>
       </BaseWrapper>

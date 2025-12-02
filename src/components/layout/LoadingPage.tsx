@@ -72,6 +72,9 @@ export default function LoadingPage() {
     tl.to(loaderRef.current, {
       opacity: 0,
       duration: 0.5,
+    }).to(loaderRef.current, {
+      pointerEvents: "none",
+      duration: 0,
     });
   });
 

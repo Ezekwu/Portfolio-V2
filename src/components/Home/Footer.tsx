@@ -199,7 +199,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div ref={copyrightRef} className="flex fflex-row items-start sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-typography-secondary uppercase">
+          <div className="flex flex-row items-start sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-typography-secondary uppercase">
             <p>Ezekwu Jeremiah 2025 © </p>
             <p>Designed by <a href="https://chibueze-uchegbu.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white/85 underline font-normal">Chibueze</a></p>
           </div>

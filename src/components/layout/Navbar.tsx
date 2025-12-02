@@ -16,21 +16,30 @@ export default function Navbar() {
   const menuIconRef = useRef<HTMLSpanElement>(null);
   const closeIconRef = useRef<HTMLSpanElement>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
   function toggleMenu() {
     setIsOpen(!isOpen);
   }
 
-  // Initialize icon states on mount
   useEffect(() => {
     const menuIcon = menuIconRef.current;
     const closeIcon = closeIconRef.current;
     
     if (!menuIcon || !closeIcon) return;
 
-    // Set initial states
     gsap.set(menuIcon, { opacity: 1, rotation: 0, scale: 1, display: "flex" });
     gsap.set(closeIcon, { opacity: 0, rotation: 90, scale: 0.5, display: "none" });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -89,7 +98,7 @@ export default function Navbar() {
   }, [isOpen]);
 
 return (
-  <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm">
+  <header className={cn("fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent", isScrolled ? "backdrop-blur-sm " : "")}>
     <BaseWrapper className="flex items-center justify-between py-2">
       <Link to="/" className="z-60">
           <h1 className="font-poppins text-white/85 text-[22px] font-regular">ezekwu</h1>
